@@ -1,4 +1,4 @@
-# 🛒 Azərbaycan Pərakəndə Zəncirlərinin Müştərilərini Klasterləşdirmə
+#  Azərbaycan Pərakəndə Zəncirlərinin Müştərilərini Klasterləşdirmə
 
 > *"Hər müştəri eyni deyil — bəzisi hər həftə gəlir, bəzisi bir dəfə gəlib yaddan çıxıb."*  
 > Bu layihənin əsas məqsədi məhz budur: kimin kim olduğunu tapmaq.
@@ -24,13 +24,13 @@ Dataset üç növ event ehtiva edir:
 |-------|-------------|
 | `view` | Məhsula baxdı |
 | `cart` | Səbətə atdı |
-| `purchase` | Aldı ✅ |
+| `purchase` | Aldı  |
 
 ---
 
-## 🔬 Metodologiya
+## Metodologiya
 
-### 1️⃣ RFM Metrikası
+###  RFM Metrikası
 
 Hər müştəri üçün 3 rəqəm hesabladıq:
 
@@ -40,11 +40,11 @@ Hər müştəri üçün 3 rəqəm hesabladıq:
 | **F**requency | Tezlik | Neçə dəfə alıb? Çox = yaxşı |
 | **M**onetary | Məbləğ | Nə qədər pul xərcləyib? Çox = yaxşı |
 
-### 2️⃣ Feature Engineering
+###  Feature Engineering
 
 Məlumatların paylanması gözəl deyildi (sağa yayılmış). Buna görə **log transform** tətbiq etdik, sonra **StandardScaler** ilə normallaşdırdıq.
 
-### 3️⃣ Optimal Klaster Sayı
+###  Optimal Klaster Sayı
 
 İki metodla yoxladıq:
 - 🔵 **Elbow metodu** → k=4 ən aydın "dirsək" nöqtəsidir
@@ -52,7 +52,7 @@ Məlumatların paylanması gözəl deyildi (sağa yayılmış). Buna görə **lo
 
 Nəticə: **4 klaster** seçildi.
 
-### 4️⃣ K-Means Modeli
+###  K-Means Modeli
 
 ```
 KMeans(n_clusters=4, random_state=42, n_init=15, max_iter=500)
@@ -77,13 +77,13 @@ Son **Silhouette skoru** ≈ yaxşı ayrışma — model öz işini gözəl gör
 
 Layihədə aşağıdakı qrafiklər var:
 
-- 📊 Event növlərinin bar chart + pie chart paylanması
-- 🏷️ Ən çox satılan Top 10 brend (horizontal bar)
-- 💰 Alış qiymətlərinin histoqramı (median xətti ilə)
-- 📈 RFM metrikalarının paylanması (3 panel)
-- 🗺️ **PCA 2D xəritəsi** — klasterlər vizual olaraq görünür
-- 🍩 Seqmentlər üzrə müştəri paylanması (donut chart)
-- 🔀 RFM Scatter Matrix
+-  Event növlərinin bar chart + pie chart paylanması
+-  Ən çox satılan Top 10 brend (horizontal bar)
+-  Alış qiymətlərinin histoqramı (median xətti ilə)
+-  RFM metrikalarının paylanması (3 panel)
+-  **PCA 2D xəritəsi** — klasterlər vizual olaraq görünür
+-  Seqmentlər üzrə müştəri paylanması (donut chart)
+-  RFM Scatter Matrix
 
 ---
 
@@ -96,7 +96,7 @@ DBSCAN da sınadıq. Nəticə?
 
 ---
 
-## 🗂️ Layihə Strukturu
+##  Layihə Strukturu
 
 ```
 📁 project/
